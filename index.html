@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4HN3B9YDY0"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-4HN3B9YDY0');
+	</script>
+
+	<script async src="https://tally.so/widgets/embed.js"></script>
+
+	<meta charset="UTF-8">
+	<html lang="en">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DarkOS Icon Pack</title>
+	<meta name="description"content="A beautiful icon pack made exclusively for MacOS and iOS and iOS.">
+
+	<!-- Facebook Meta Tags -->
+	<meta property="og:url" content="https://darkosicon.com">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="A beautiful icon pack made exclusively for MacOS and iOS">
+	<meta property="og:description" content="A beautiful icon pack made exclusively for MacOS and iOS and iOS.">
+	<meta property="og:image" content="https://darkosicon.com/images/share.png">
+
+	<!-- Twitter Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta property="twitter:domain" content="darkosicon.com">
+	<meta property="twitter:url" content="https://darkosicon.com">
+	<meta name="twitter:title" content="A beautiful icon pack made exclusively for MacOS and iOS">
+	<meta name="twitter:description" content="A beautiful icon pack made exclusively for MacOS and iOS and iOS.">
+	<meta name="twitter:image" content="https://darkosicon.com/images/share.png">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+	<link rel="mask-icon" href="./images/favicon/favicon-32x32.png" color="#0b0b0f">
+	<meta name="msapplication-TileColor" content="#0b0b0f">
+	<meta name="theme-color" content="#0b0b0f">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="alternate" href="https://www.darkosicon.com/en" hreflang="en">
+    <link rel="alternate" href="https://www.darkosicon.com/zh" hreflang="zh">
+    <title>Darkosicon</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #loader {
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0b0b0f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+        }
+
+        .spinner:after {
+            content: " ";
+            display: block;
+            width: 64px;
+            height: 64px;
+            margin: 8px;
+            border-radius: 50%;
+            border: 6px solid #ffffff; 
+            border-color: #ffffff transparent #ffffff transparent;
+            animation: spin 1.2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const userLang = navigator.language || navigator.userLanguage;
+            let langPath = '/en'; 
+
+            if (userLang.startsWith('zh')) {
+                langPath = '/zh';
+            }
+
+            setTimeout(function() {
+
+                document.getElementById('loader').style.display = 'none';
+                window.location.href = window.location.origin + langPath;
+            }, 1000); 
+        });
+    </script>
+</head>
+<body>
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+    <p style="color: white; text-align: center;">Redirecting...</p>
+</body>
+</html>
