@@ -4056,7 +4056,9 @@ select {
     .sm\:flex {
         display: flex
     }
-
+    .sm\:flex-row {
+        flex-direction: row
+    }
     .sm\:w-96 {
         width: 24rem
     }
