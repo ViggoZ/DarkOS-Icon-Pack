@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-4HN3B9YDY0"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-4HN3B9YDY0');
+	</script>
+	<script defer src="https://cloud.umami.is/script.js" data-website-id="02fc979c-1920-469b-807c-d7a0f1b6e8d7"></script>
+	
+	<script async src="https://tally.so/widgets/embed.js"></script>
+
+	<meta charset="UTF-8">
+	<html lang="en">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DarkOS Icon Pack</title>
+	<meta name="description"content="A beautiful icon pack made exclusively for Mac and iPhone.">
+
+	<!-- Facebook Meta Tags -->
+	<meta property="og:url" content="https://darkosicon.com">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="DarkOS Icon Pack">
+	<meta property="og:description" content="A beautiful icon pack made exclusively for Mac and iPhone.">
+	<meta property="og:image" content="https://darkosicon.com/images/og.jpg">
+
+	<!-- Twitter Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta property="twitter:domain" content="darkosicon.com">
+	<meta property="twitter:url" content="https://darkosicon.com">
+	<meta name="twitter:title" content="DarkOS Icon Pack">
+	<meta name="twitter:description" content="A beautiful icon pack made exclusively for Mac and iPhone.">
+	<meta name="twitter:image" content="https://darkosicon.com/images/og.jpg">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+	<link rel="mask-icon" href="images/favicon/favicon-32x32.png" color="#0b0b0f">
+	<meta name="msapplication-TileColor" content="#0b0b0f">
+	<meta name="theme-color" content="#0b0b0f">
+	
+	<script src="js/alpine.min.js"></script>
+	<link rel="stylesheet" href="css/tailwind.css">
+	<link rel="stylesheet" href="css/darkos.css">
+</head>
+
+<body hx-ext="multi-swap"  class="min-h-screen">
+	<div class="App relative flex min-h-screen flex-col bg-[#0b0b0f] text-white isolate"
+		style="scroll-behavior: smooth;">
+		<div class="relative container mx-auto w-full -z-10">
+			<img src="images/lights.svg" alt="DarkOS Icon Pack"
+				class="absolute left-0 top-0 transform-gpu w-full">
+		</div>
+		<main>
+			<header x-data="{ atTop: false }"
+				class="sticky top-0 left-0 right-0 transition duration-1000 ease-in-out z-10 pt-4"
+				:class="{ 'text-white': atTop, 'bg-none pt-4': !atTop, 'bg-zinc-900/5 pt-2 pb-2 backdrop-blur-sm': atTop }"
+				@scroll.window="atTop = (window.pageYOffset < 50) ? false: true">
+				<div class="container mx-auto flex items-center justify-between mx-auto px-8">
+					<div class="max-w-48 w-42">
+						<img src="images/logo-darkos.png" alt="DarkOS Icon Pack" class="w-36">
+					</div>
+
+					<div class="flex items-center gap-8">
+						<!-- <a href="test.html"
+							class="hidden sm:block py-2.5 px-6 text-white/50 hover:text-white duration-300 ">
+							Guide
+						</a> -->
+						<a href="#tally-open=woA4PP&amp;tally-layout=modal&amp;tally-emoji-text=%F0%9F%9B%B0%EF%B8%8F&amp;tally-emoji-animation=wave"
+							class="hidden sm:flex group py-3 pl-6 pr-4 from-zinc-900 text-white to-zinc-900 flex items-center gap-2 text-xs sm:text-base hover:from-zinc-900 hover:text-zinc-100 hover:text-white rounded-full border border-t-white/10  border-x-white/10 border-b-white/10 hover:duration-300 hover:shadow-lg hover:shadow-white/10 duration-300">
+							<span>Join Waitlist</span>
+							<div class="relative right-0 group-hover:translate-x-1 w-5 duration-200">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 24 24"
+									fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+									stroke-linejoin="round" class="arrow-right">
+									<path class="opacity-0 group-hover:opacity-100 duration-200" d="M5 12h14" />
+									<path d="m12 5 7 7-7 7" />
+								</svg>
+							</div>
+						</a>
+						<div class="relative">
+							<button id="dropdownButton" class="flex group py-3 pl-6 pr-4 from-zinc-900 text-white to-zinc-900 flex items-center gap-2 text-xs sm:text-base hover:from-zinc-900 hover:text-zinc-100 hover:text-white rounded-full border border-t-white/10  border-x-white/10 border-b-white/10 hover:duration-300 hover:shadow-lg hover:shadow-white/10 duration-300">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M10.9066 9.33333C10.96 8.89333 11 8.45333 11 7.99999C11 7.54666 10.96 7.10666 10.9066 6.66666H13.16C13.2666 7.09333 13.3333 7.53999 13.3333 7.99999C13.3333 8.45999 13.2666 8.90666 13.16 9.33333M9.72665 13.04C10.1266 12.3 10.4333 11.5 10.6466 10.6667H12.6133C11.9733 11.7667 10.9533 12.62 9.72665 13.04ZM9.55998 9.33333H6.43998C6.37331 8.89333 6.33331 8.45333 6.33331 7.99999C6.33331 7.54666 6.37331 7.09999 6.43998 6.66666H9.55998C9.61998 7.09999 9.66665 7.54666 9.66665 7.99999C9.66665 8.45333 9.61998 8.89333 9.55998 9.33333ZM7.99998 13.3067C7.44665 12.5067 6.99998 11.62 6.72665 10.6667H9.27331C8.99998 11.62 8.55331 12.5067 7.99998 13.3067ZM5.33331 5.33333H3.38665C4.01998 4.22666 5.04665 3.37333 6.26665 2.95999C5.86665 3.69999 5.56665 4.49999 5.33331 5.33333ZM3.38665 10.6667H5.33331C5.56665 11.5 5.86665 12.3 6.26665 13.04C5.04665 12.62 4.01998 11.7667 3.38665 10.6667ZM2.83998 9.33333C2.73331 8.90666 2.66665 8.45999 2.66665 7.99999C2.66665 7.53999 2.73331 7.09333 2.83998 6.66666H5.09331C5.03998 7.10666 4.99998 7.54666 4.99998 7.99999C4.99998 8.45333 5.03998 8.89333 5.09331 9.33333M7.99998 2.68666C8.55331 3.48666 8.99998 4.37999 9.27331 5.33333H6.72665C6.99998 4.37999 7.44665 3.48666 7.99998 2.68666ZM12.6133 5.33333H10.6466C10.4333 4.49999 10.1266 3.69999 9.72665 2.95999C10.9533 3.37999 11.9733 4.22666 12.6133 5.33333ZM7.99998 1.33333C4.31331 1.33333 1.33331 4.33333 1.33331 7.99999C1.33331 11.68 4.31998 14.6667 7.99998 14.6667C11.68 14.6667 14.6666 11.68 14.6666 7.99999C14.6666 4.31999 11.68 1.33333 7.99998 1.33333Z" fill="black"/>
+									<path d="M10.9066 9.33333C10.96 8.89333 11 8.45333 11 7.99999C11 7.54666 10.96 7.10666 10.9066 6.66666H13.16C13.2666 7.09333 13.3333 7.53999 13.3333 7.99999C13.3333 8.45999 13.2666 8.90666 13.16 9.33333M9.72665 13.04C10.1266 12.3 10.4333 11.5 10.6466 10.6667H12.6133C11.9733 11.7667 10.9533 12.62 9.72665 13.04ZM9.55998 9.33333H6.43998C6.37331 8.89333 6.33331 8.45333 6.33331 7.99999C6.33331 7.54666 6.37331 7.09999 6.43998 6.66666H9.55998C9.61998 7.09999 9.66665 7.54666 9.66665 7.99999C9.66665 8.45333 9.61998 8.89333 9.55998 9.33333ZM7.99998 13.3067C7.44665 12.5067 6.99998 11.62 6.72665 10.6667H9.27331C8.99998 11.62 8.55331 12.5067 7.99998 13.3067ZM5.33331 5.33333H3.38665C4.01998 4.22666 5.04665 3.37333 6.26665 2.95999C5.86665 3.69999 5.56665 4.49999 5.33331 5.33333ZM3.38665 10.6667H5.33331C5.56665 11.5 5.86665 12.3 6.26665 13.04C5.04665 12.62 4.01998 11.7667 3.38665 10.6667ZM2.83998 9.33333C2.73331 8.90666 2.66665 8.45999 2.66665 7.99999C2.66665 7.53999 2.73331 7.09333 2.83998 6.66666H5.09331C5.03998 7.10666 4.99998 7.54666 4.99998 7.99999C4.99998 8.45333 5.03998 8.89333 5.09331 9.33333M7.99998 2.68666C8.55331 3.48666 8.99998 4.37999 9.27331 5.33333H6.72665C6.99998 4.37999 7.44665 3.48666 7.99998 2.68666ZM12.6133 5.33333H10.6466C10.4333 4.49999 10.1266 3.69999 9.72665 2.95999C10.9533 3.37999 11.9733 4.22666 12.6133 5.33333ZM7.99998 1.33333C4.31331 1.33333 1.33331 4.33333 1.33331 7.99999C1.33331 11.68 4.31998 14.6667 7.99998 14.6667C11.68 14.6667 14.6666 11.68 14.6666 7.99999C14.6666 4.31999 11.68 1.33333 7.99998 1.33333Z" fill="url(#paint0_linear_710_36817)"/>
+									<defs>
+									<linearGradient id="paint0_linear_710_36817" x1="7.99998" y1="1.33333" x2="7.99998" y2="14.6667" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#FAFAFA"/>
+									<stop offset="1" stop-color="#8C8C8C"/>
+									</linearGradient>
+									</defs>
+									</svg>
+									
+								English
+							</button>
+							<div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-36 border border-zinc-800 bg-[#18181B] rounded-2xl shadow-lg py-2 px-2">
+								<a href="/" class="block px-4 py-2 text-white/50 hover:text-white hover:bg-white/10 rounded-t-md">English</a>
+								<a href="/zh" class="block px-4 py-2 text-white/50 hover:text-white hover:bg-white/10 rounded-b-md">简体中文</a>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</header>
+            <div class="flex items-center justify-center bg-cover bg-center bg-no-repeat">
+                <div class="justify-center text-center text-white">
+                    <img class="max-w-xl" src="/images/404.png" alt="">
+                    <p class="-mt-12 md:text-xl">Page not found</p>
+                    <a href="/" class="mt-16 sm:flex group py-3 pl-6 pr-4 from-zinc-900 text-white to-zinc-900 flex items-center gap-2 text-xs sm:text-base hover:from-zinc-900 hover:text-zinc-100 hover:text-white rounded-full border border-t-white/10  border-x-white/10 border-b-white/10 hover:duration-300 hover:shadow-lg hover:shadow-white/10 duration-300">
+                        <span>GoBack</span>
+                        <div class="relative right-0 group-hover:translate-x-1 w-5 duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round" class="arrow-right">
+                                <path class="opacity-0 group-hover:opacity-100 duration-200" d="M5 12h14" />
+                                <path d="m12 5 7 7-7 7" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                
+            </div>
+            <footer class="container flex items-center justify-between p-8 pb-12 mx-auto border-t border-zinc-800 text-sm text-zinc-500">
+					<p>
+						© 2024 DarkOS. All rights reserved.
+					</p>
+
+					<div class="flex gap-8">
+						<nav>
+							<a href="https://www.twitter.com/viggozw" class="py-2.5 px-6 text-white/50 hover:text-white duration-300" target="_blank">Twitter</a>
+						</nav>
+						
+						<!-- <div>
+							<a href="https://www.twitter.com/viggozw" class="py-2.5 px-6 text-white/50 hover:text-white duration-300" target="_blank">Become an affiliate</a>
+						</div> -->
+					</div>
+				</footer>
+        </main> 
+    </div>
+</body>
+</html>
