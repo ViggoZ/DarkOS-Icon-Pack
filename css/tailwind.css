@@ -1763,6 +1763,10 @@ select {
     max-width: 36rem
 }
 
+.sm\:max-w-xl {
+    max-width: 36rem
+}
+
 .flex-1 {
     flex: 1 1 0%
 }
