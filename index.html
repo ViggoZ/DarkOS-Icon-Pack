@@ -224,40 +224,84 @@
 				</div>
 				<div class="relative w-full mt-8 sm:mt-16 mb-2">
 					<div class="grid grid-cols-12 w-full mx-auto gap-4">
-						<div class="col-span-12 md:col-span-8 rounded-2xl bg-gradient-to-br from-white/5 via-white/10 to-white/10 hover:bg-white/5 duration-300 ease-in">
-							<div class="flex flex-col items-between w-full h-full bg-[#18181B] rounded-2xl overflow-hidden">
-								<img src="images/screenshot_Mac.jpg" alt="DarkOS Icon Pack"
-									class="w-full rounded-2xl transform transition-transform duration-300 ease-in-out hover:scale-105">
-								<div class="hidden p-8 group-hover:flex flex-col">
-									<h3 class="mt-2 text-lg">300+ Beautiful Icons For Mac and iPhone</h3>
-									<ul class="hidden sm:flex flex-wrap gap-2 mt-4 text-sm">
-										<li class="text-zinc-500 px-4 p-1.5 rounded border border-white/5 bg-zinc-900">System(20)</li>
-										<li class="text-zinc-500 px-4 p-1.5 rounded border border-white/5 bg-zinc-900">System Folders(20)</li>
-										<li class="text-zinc-500 px-4 p-1.5 rounded border border-white/5 bg-zinc-900">Extensions(20)</li>
-										<li class="text-zinc-500 px-4 p-1.5 rounded border border-white/5 bg-zinc-900">Social Networking(20)</li>
-										<li class="text-zinc-500 px-4 p-1.5 rounded border border-white/5 bg-zinc-900">Entertainment(20)</li>
-										<li class="text-zinc-500 px-4 p-1.5 rounded border border-white/5 bg-zinc-900">Business(20)</li>
-										<li class="text-zinc-500 px-4 p-1.5 rounded border border-white/5 bg-zinc-900">Productivity(20)</li>
-										<li class="text-zinc-500 px-4 p-1.5 rounded border border-white/5 bg-zinc-900">Developer Tools(20)</li>
-										<li class="text-zinc-500 px-4 p-1.5 rounded border border-white/5 bg-zinc-900">Graphics & Design(20)</li>
-										<li class="text-zinc-500 px-4 p-1.5 rounded border border-white/5 bg-zinc-900">Game(20)</li>
-									</ul>
+						<div class="col-span-12 md:col-span-8 rounded-2xl bg-gradient-to-br  duration-300 ease-in">
+							<div class="carousel" id="carousel">
+								<div class="carousel-images">
+									<img src="images/screenshot_mac_01.jpg" alt="DarkOS Icon Pack">
+									<img src="images/screenshot_mac_02.jpg" alt="Screenshot 1">
+									<img src="images/screenshot_mac_03.jpg" alt="Screenshot 2">
+									<img src="images/screenshot_mac_04.jpg" alt="Screenshot 3">
 								</div>
+								<div class="carousel-buttons">
+									<div class="carousel-button active" onclick="showImage(0)"></div>
+									<div class="carousel-button" onclick="showImage(1)"></div>
+									<div class="carousel-button" onclick="showImage(2)"></div>
+									<div class="carousel-button" onclick="showImage(3)"></div>
+								</div>
+								<button class="carousel-nav left" onclick="prevImage()">&#10094;</button>
+								<button class="carousel-nav right" onclick="nextImage()">&#10095;</button>
 							</div>
 						</div>
 						<div class="col-span-12 md:col-span-4 rounded-2xl bg-gradient-to-br from-white/5 via-white/10 to-white/10 hover:bg-white/5 duration-300 ease-in">
 							<div class="flex flex-col w-full h-full bg-[#18181B] rounded-2xl overflow-hidden">
 								<img src="images/screenshot_iPhone.jpg" alt="DarkOS Icon Pack"
 									class="w-full rounded-2xl transform transition-transform duration-300 ease-in-out hover:scale-105">
-								<div class="hidden flex flex-col items-start px-8 p-8">
-									<h3 class="mt-4 text-lg">Truly Dark Mode on your iPhone.</h3>
-									<p class="mt-2 text-sm text-zinc-500">Make your devices look cooler with over 300+
-										icons and simple dark wallpapers.</p>
-								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+			
+				<script>
+					let currentIndex = 0;
+					const carouselImages = document.querySelector('.carousel-images');
+					const buttons = document.querySelectorAll('.carousel-button');
+					const totalImages = carouselImages.children.length;
+					let autoPlayInterval;
+
+					function showImage(index) {
+						carouselImages.style.transform = `translateX(-${index * 100}%)`;
+						buttons.forEach((button, i) => {
+							button.classList.toggle('active', i === index);
+						});
+						currentIndex = index;
+					}
+
+					function autoPlay() {
+						currentIndex = (currentIndex + 1) % totalImages;
+						showImage(currentIndex);
+					}
+
+					function startAutoPlay() {
+						autoPlayInterval = setInterval(autoPlay, 2000);
+					}
+
+					function stopAutoPlay() {
+						clearInterval(autoPlayInterval);
+					}
+
+					function prevImage() {
+						currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+						showImage(currentIndex);
+					}
+
+					function nextImage() {
+						currentIndex = (currentIndex + 1) % totalImages;
+						showImage(currentIndex);
+					}
+
+					carouselImages.addEventListener('mouseover', stopAutoPlay);
+					carouselImages.addEventListener('mouseout', startAutoPlay);
+
+					// Initialize
+					showImage(currentIndex);
+					startAutoPlay();
+
+					buttons.forEach((button, index) => {
+						button.addEventListener('click', () => {
+							showImage(index);
+						});
+					});
+				</script>
 			</div>
 			
 			<!-- END HERO -->
@@ -1318,13 +1362,13 @@
 							<p class="mt-4 px-8 text-zinc-500">Enjoy your fresh devices home screen</p>
 						</div>
 						<div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-8">
-							<a href="https://www.producthunt.com/posts/darkos-icon-pack?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-darkos&#0045;icon&#0045;pack" target="_blank" style="position: relative; display: inline-block; border-radius: 29px; overflow: hidden;">
+							<!-- <a href="https://www.producthunt.com/posts/darkos-icon-pack?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-darkos&#0045;icon&#0045;pack" target="_blank" style="position: relative; display: inline-block; border-radius: 29px; overflow: hidden;">
 								<img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=459443&theme=light" 
 									 alt="DarkOS&#0032;Icon&#0032;Pack - Truly&#0032;Dark&#0032;Mode&#0032;on&#0032;your&#0032;Mac&#0032;and&#0032;iPhone | Product Hunt" 
 									 style="width: 250px; height: 54px; border-radius: 27px; display: block;" 
 									 width="250" height="54" />
 								<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; border: 1px solid #FF6154; border-radius: 27px;"></div>
-							  </a>
+							  </a> -->
 
 							<!-- <a href="#tally-open=woA4PP&amp;tally-layout=modal&amp;tally-emoji-text=%F0%9F%9B%B0%EF%B8%8F&amp;tally-emoji-animation=wave"
 							  class="group py-4 pl-6 pr-4 bg-gradient-to-b from-zinc-4001 to-zinc-100 flex items-center gap-2 hover:from-zinc-100 duration-300 hover:to-white text-zinc-900 hover:text-black font-bold rounded-full border-t-white/75 border-x-white/50 border-b-none hover:border-white text-base hover:shadow-lg hover:shadow-white/10">
